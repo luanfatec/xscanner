@@ -1,0 +1,3 @@
+Executar sempre os comandos abaixo para configurar o JWT:
+# php artisan vendor:publish --provider="Tymon\JWTAuth\Providers\LaravelServiceProvider"
+# php artisan jwt:secret

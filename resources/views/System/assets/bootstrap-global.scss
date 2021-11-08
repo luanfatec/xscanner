@@ -1,0 +1,9 @@
+$theme-colors: (
+  "xs-dark-color": #2c2b2b,
+  "xs-dark-color-tertiary": #292828,
+  "xs-white": #fff,
+  "xs-success": rgb(0, 255, 0),
+  "xs-danger": rgb(250, 82, 31)
+);
+
+@import "../../../../node_modules/bootstrap/scss/bootstrap.scss";

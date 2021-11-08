@@ -1,0 +1,288 @@
+$dark-color: #2c2b2b;
+$dark-color-secondary: #363636;
+$dark-color-tertiary: #292828;
+$dark-gray: #4a4a4a;
+
+$icon-color-host: gray;
+
+$white: #fff;
+$gray: gray;
+
+$xs-green: rgb(0, 255, 0);
+
+
+body {
+    background-image: url('images/system/back01.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+header#header-menu {
+    background-color: #363636;
+
+    .b-example-divider {
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+    }
+
+    .form-control-dark {
+        color: $white;
+        background-color: var(--bs-dark);
+        border-color: var(--bs-gray);
+    }
+    .form-control-dark:focus {
+        color: $white;
+        background-color: var(--bs-dark);
+        border-color: $white;
+        box-shadow: 0 0 0 .25rem rgba(255, 255, 255, .25);
+    }
+
+    .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+    }
+
+    .text-small {
+        font-size: 85%;
+    }
+
+    .dropdown-toggle {
+        outline: 0;
+    }
+
+    .nav-link {
+        color: red;
+    }
+
+    img#logo {
+        width: 35%;
+    }
+
+}
+
+#content-main {
+    height: 80vh;
+    background-color: $dark-color-secondary;
+
+    overflow-y: auto;
+
+    position: relative;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    color: $white;
+}
+
+.xs-cards-lists {
+    width: 100%;
+    background-color: $dark-color-tertiary;
+    box-shadow: 1px 3px 5px rgba(0,0,0, .5);
+    border-radius: 10px;
+    height: 4vh;
+    padding: 2px 15px;
+
+    font-size: 1rem;
+
+    align-items: flex-start;
+
+    position: relative;
+
+    i {
+        color: $icon-color-host;
+        margin-right: 4px;
+    }
+
+    button {
+        background: none;
+        border: none;
+        color: $gray;
+
+        &:hover {
+            color: $xs-green;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    .xs-btn-details {
+        float: right;
+    }
+
+}
+
+#xs-btn-create-host {
+    z-index: 100;
+    position: absolute;
+    right: 30px;
+    bottom: 20px;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+
+#xs-model-hosts, #xs-model-ports, #xs-model-hosts-create, #xs-model-history-ports {
+
+    header {
+        background-color: $dark-color-tertiary;
+        span.w3-button {
+            color: $white;
+        }
+
+        span.xs-name-ports, span.xs-name-host, span.xs-history-ports {
+            font-size: 1.4rem;
+            margin-left: 8px;
+        }
+    }
+
+    .w3-container.xs-select01 {
+        height: 65vh;
+        overflow-y: auto;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        .xs-content-details {
+
+            .selectrow01 {
+                margin: 0 5px;
+                padding: 10px 0;
+                border: 1px solid rgba(255, 255, 255, .1);
+
+                .xs-separate {
+                    width: 100%;
+                    height: 10px;
+                    margin: 5px 0;
+                    border-top: 1px solid rgba(255, 255, 255, .1);
+                }
+
+                #inactive-host, #delete-scan, #delete-host {
+                    margin-right: 0;
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+
+                input[id^="xs-p-"], textarea[id^="xs-p-"], select[id^="xs-p-"] {
+                    background-color: $dark-gray;
+                    border: none;
+                    color: $white;
+                    margin-top: 5px;
+                }
+
+                .xs-action-create-scanner, .xs-action-delete-scanner, .xs-btn-cancel, .xs-action-create-host {
+                    background-color: $dark-gray;
+                    width: 70%;
+                }
+            }
+
+            padding: 10px;
+            color: $white;
+            background-color: $dark-color;
+            margin: 5px;
+
+            box-shadow: 1px 1px 5px rgba(0,0,0, .8);
+
+        }
+
+    }
+
+    footer {
+        background-color: $dark-color-tertiary;
+        color: $white;
+        height: 5vh;
+    }
+
+}
+
+#xs-model-hosts-create {
+    .w3-container.xs-select01 {
+        height: 56vh
+    }
+}
+
+// Painel
+#root-panel {
+    .selected01 {
+        .card {
+            box-shadow: 2px 2px 5px rgb(0, 0, 0);
+
+            .xs-card-b-host, .xs-card-b-port, .xs-card-b-history {
+                text-align: center;
+                font-size: 2rem;
+            }
+        }
+
+        .card-header {
+            text-align: center;
+        }
+
+        .xs-title-card {
+            margin-left: 5px;
+            font-size: 1.5rem;
+        }
+
+        .xs-history {
+            .xs-btn-data {
+                float: right;
+            }
+
+            .xs-cards-lists {
+                background: $dark-color;
+                box-shadow: 0px 1.5px 3px rgba(255, 255, 255, 0.102);
+            }
+        }
+    }
+
+}
+
+.xs-paginate-buttons {
+    position: absolute;
+    float: left;
+    bottom: 0;
+    left: 20px;
+
+    .pagination {
+        box-shadow: 1px 1px 2px rgba(255, 255, 255, 0.15);
+        background-color: $dark-color;
+        border-radius: 10px;
+        font-size: 0.8rem;
+
+        .page-item {
+            span.page-link {
+                background: none;
+                border: none;
+            }
+        }
+    }
+
+    a {
+        background: none;
+        border: none;
+        text-decoration: none;
+        color:$gray;
+    }
+}
+
+
+#root-profile {
+    padding: 10px;
+
+
+    .xs-action-delete-account, .xs-action-updated-account {
+        margin: 20px 0;
+        width: 100%;
+        background-color: $dark-color-secondary;
+    }
+}
