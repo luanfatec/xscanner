@@ -63,6 +63,38 @@ header#header-menu {
         width: 35%;
     }
 
+    #xs-menu-exit {
+        position: relative;
+        display: none;
+
+        a {
+            text-decoration: none;
+
+            &:hover {
+                color: $white;
+            }
+
+            li {
+                right: -15px;
+                width: 100px;
+                list-style: none;
+                background-color: $dark-color;
+                position: absolute;
+                display: inline-block;
+                text-align: center;
+                padding: 10px;
+                z-index: 100;
+
+                box-shadow: 1px 1px 1px rgba(255, 255, 255, .1);
+
+                border-bottom-left-radius: 5px;
+                border-bottom-right-radius: 5px;
+                border-top: solid 1px rgba(255, 255, 255, .10);;
+            }
+        }
+
+    }
+
 }
 
 #content-main {
@@ -143,6 +175,7 @@ header#header-menu {
             font-size: 1.4rem;
             margin-left: 8px;
         }
+
     }
 
     .w3-container.xs-select01 {
@@ -179,6 +212,10 @@ header#header-menu {
                     border: none;
                     color: $white;
                     margin-top: 5px;
+                }
+
+                textarea[id^="xs-p-"]::-webkit-scrollbar {
+                    display: none;
                 }
 
                 .xs-action-create-scanner, .xs-action-delete-scanner, .xs-btn-cancel, .xs-action-create-host {

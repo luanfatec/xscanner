@@ -115,10 +115,15 @@
                     </li>
 
                     <li>
-                      <a href="{{ route('system.profile') }}" class="nav-link text-white dropdown">
+                      <a href="{{ route('system.profile') }}" class="nav-link text-white dropdown xs-active-menu-exit">
                         <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#people-circle"/></svg>
                         Conta
                       </a>
+                      <ul id="xs-menu-exit">
+                          <a href="{{ route('system.login.logout') }}">
+                              <li>Sair</li>
+                          </a>
+                      </ul>
                     </li>
 
                   </ul>
@@ -141,5 +146,16 @@
     <script src="{{ asset('assets/js/system.js') }}"></script>
 
     @yield('scripts')
+
+    <script>
+        $(window).ready(() => {
+            $(".xs-active-menu-exit").hover(() => {
+                $("#xs-menu-exit").css('display', "block")
+            });
+            $("#xs-menu-exit").mouseleave(() => {
+                $("#xs-menu-exit").css('display', "none")
+            });
+        })
+    </script>
 </body>
 </html>

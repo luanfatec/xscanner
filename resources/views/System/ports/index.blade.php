@@ -81,7 +81,7 @@
                             <div class="col-12 mt-2">
                                 <div class="form-group">
                                     <label for="xs-port-send">Descrição:</label>
-                                    <textarea class="form-control" id="xs-p-description-port" cols="30" rows="4" disabled></textarea>
+                                    <textarea class="form-control" id="xs-p-description-port" cols="30" rows="10" disabled></textarea>
                                 </div>
                             </div>
                         </div>
@@ -178,7 +178,7 @@
                 },
                 success: function (response, status, xhr) {
                     if (response.code || response.code == 406) {
-                        template_code_expired("#xs-model-hosts .xs-select0");
+                        template_code_expired("#xs-model-hosts .xs-content-details", response);
                     } else {
                         /**
                         * Adicionando valores a interface.
